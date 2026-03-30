@@ -1,3 +1,4 @@
+import GradientButton from "../UI/GradientButton";
 import shoppingCart from "../../assets/products/shopping-cart.png";
 
 export default function NavBar() {
@@ -68,9 +69,7 @@ export default function NavBar() {
             <img src={shoppingCart} alt="shopping-cart icon" />
             <span>Login</span>
           </a>
-          <a className="btn font-inter text-base rounded-full py-6 text-white bg-primary-gradient">
-            Get Started
-          </a>
+          <GradientButton text="Get Started" />
         </div>
       </div>
     </div>
