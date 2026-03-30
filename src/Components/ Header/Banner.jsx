@@ -1,13 +1,20 @@
 import bannerImage from "../../assets/banner.png";
 import playButtonImage from "../../assets/Play.png";
 import GradientButton from "../UI/GradientButton";
+import BadgeDot from "../../assets/badge_dot.png";
 export default function Banner() {
   return (
     <div className="hero container mx-auto py-15">
       <div className="hero-content gap-18  flex-col lg:flex-row-reverse ">
         <img src={bannerImage} className="max-w-sm rounded-lg shadow-2xl" />
         <div>
-          <h1 className="font-extrabold text-7xl/21 text-[#101727]/90">
+          <div className="flex gap-3 px-4 py-2 w-fit rounded-full bg-[#E1E7FF]  items-center">
+            <img src={BadgeDot} className="size-5 object-cover" />
+            <span className="font-bold bg-primary-gradient bg-clip-text text-transparent">
+              New: AI-Powered Tools Available
+            </span>
+          </div>
+          <h1 className="font-extrabold text-5xl/snug sm:text-6xl/snug  md:text-7xl/21 text-[#101727]/90">
             Supercharge Your
             <br />
             Digital Workflow
