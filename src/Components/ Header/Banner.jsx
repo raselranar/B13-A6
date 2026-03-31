@@ -14,12 +14,11 @@ export default function Banner() {
               New: AI-Powered Tools Available
             </span>
           </div>
-          <h1 className="font-extrabold text-5xl/snug sm:text-6xl/snug  md:text-7xl/21 text-[#101727]/90">
-            Supercharge Your
-            <br />
+          <h1 className="font-extrabold text-3xl/snug sm:text-4xl/snug md:text-5xl/snug  lg:text-6xl/21 text-[#101727]/90">
+            Supercharge Your <br className="hidden lg:block" />
             Digital Workflow
           </h1>
-          <p className="py-6 text-gray-500 text-lg max-w-150">
+          <p className="py-6 text-gray-500 text-lg max-w-md">
             Access premium AI tools, design assets, templates, and productivity
             software—all in one place. Start creating faster today. Explore
             Products
