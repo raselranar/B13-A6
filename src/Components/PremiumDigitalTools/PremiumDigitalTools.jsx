@@ -1,11 +1,13 @@
 import { Suspense, useState } from "react";
 import ProductsSection from "./ProductsSection/ProductsSection";
 import Loading from "../UI/Loading";
+import CartSection from "./ProductsSection/CartSection/CartSection";
 
 export default function PremiumDigitalTools() {
   const [activeTab, setActiveTab] = useState("products");
+  const [selectProduct, setSelectProduct] = useState([]);
   return (
-    <section className="container mx-auto mt-20">
+    <section className="container mx-auto mt-20 px-4">
       <div className="">
         <h2 className="font-extrabold text-3xl  sm:text-4xl md:text-5xl leading-17 text-center">
           Premium Digital Tools
@@ -31,10 +33,12 @@ export default function PremiumDigitalTools() {
         </button>
       </div>
       {/* cards */}
-      <section className="mt-10 grid grid-cols-1">
-        {activeTab === "products" && (
+      <section className="mt-10">
+        {activeTab === "cart" ? (
+          <CartSection />
+        ) : (
           <Suspense fallback={<Loading />}>
-            <ProductsSection />
+            <ProductsSection onSelectProduct={setSelectProduct} />
           </Suspense>
         )}
       </section>

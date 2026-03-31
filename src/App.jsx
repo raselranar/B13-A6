@@ -5,9 +5,9 @@ import StatsSection from "./Components/StatsSection";
 function App() {
   return (
     <>
-      {/* <HeaderSection /> */}
+      <HeaderSection />
       <main>
-        {/* <StatsSection /> */}
+        <StatsSection />
         <PremiumDigitalTools />
       </main>
     </>
