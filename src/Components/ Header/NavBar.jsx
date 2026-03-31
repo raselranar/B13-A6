@@ -1,7 +1,7 @@
 import GradientButton from "../UI/GradientButton";
-import shoppingCart from "../../assets/products/shopping-cart.png";
+import { FiShoppingCart } from "react-icons/fi";
 
-export default function NavBar() {
+export default function NavBar({ selectProduct }) {
   return (
     <div className="bg-base-100 shadow-sm">
       <div className="navbar container mx-auto">
@@ -65,10 +65,15 @@ export default function NavBar() {
           </ul>
         </div>
         <div className="navbar-end gap-4 ml-8">
-          <a className="flex items-center gap-4">
-            <img src={shoppingCart} alt="shopping-cart icon" />
-            <span>Login</span>
-          </a>
+          <div className="indicator">
+            <span className="indicator-item badge badge-secondary font-bold size-6 text-xs rounded-full">
+              {selectProduct.length}
+            </span>
+            <button className="p-1">
+              <FiShoppingCart size="1.4em" />
+            </button>
+          </div>
+          <a className="flex items-center gap-4">Login</a>
           <GradientButton text="Get Started" />
         </div>
       </div>

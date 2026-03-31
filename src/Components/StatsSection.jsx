@@ -1,6 +1,6 @@
 export default function StatsSection() {
   return (
-    <section className="bg-primary-gradient ">
+    <section className="bg-primary-gradient">
       <div className="py-15 place-items-center grid gap-4 text-center grid-rows-3 sm:grid-rows-1 sm:grid-cols-5 container mx-auto">
         <div className="text-white">
           <h2 className="font-extrabold text-4xl/snug sm:text-5xl/snug md:text-6xl/20.5">

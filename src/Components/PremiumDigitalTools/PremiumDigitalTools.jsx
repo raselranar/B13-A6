@@ -3,9 +3,11 @@ import ProductsSection from "./ProductsSection/ProductsSection";
 import Loading from "../UI/Loading";
 import CartSection from "./ProductsSection/CartSection/CartSection";
 
-export default function PremiumDigitalTools() {
+export default function PremiumDigitalTools({
+  setSelectProduct,
+  selectProduct,
+}) {
   const [activeTab, setActiveTab] = useState("products");
-  const [selectProduct, setSelectProduct] = useState([]);
   return (
     <section className="container mx-auto mt-20 px-4">
       <div className="">
@@ -29,13 +31,13 @@ export default function PremiumDigitalTools() {
         <button
           onClick={() => setActiveTab("cart")}
           className={`btn py-5  text-[16px] rounded-full border-none ${activeTab === "cart" && "text-white bg-primary-gradient"}`}>
-          Cart (2)
+          Cart ({selectProduct.length})
         </button>
       </div>
       {/* cards */}
       <section className="mt-10">
         {activeTab === "cart" ? (
-          <CartSection />
+          <CartSection selectProduct={selectProduct} />
         ) : (
           <Suspense fallback={<Loading />}>
             <ProductsSection onSelectProduct={setSelectProduct} />

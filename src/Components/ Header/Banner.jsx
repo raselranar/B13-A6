@@ -5,7 +5,7 @@ import BadgeDot from "../../assets/badge_dot.png";
 export default function Banner() {
   return (
     <div className="hero container mx-auto py-15">
-      <div className="hero-content gap-18  flex-col lg:flex-row-reverse ">
+      <div className="hero-content gap-42  flex-col lg:flex-row-reverse ">
         <img src={bannerImage} className="max-w-sm rounded-lg shadow-2xl" />
         <div>
           <div className="flex gap-3 px-4 py-2 w-fit rounded-full bg-[#E1E7FF]  items-center">
@@ -25,12 +25,12 @@ export default function Banner() {
           </p>
           <div className="flex gap-4">
             <GradientButton text="Explore Products" />
-            <button className="border-2 rounded-full border-[#5746d6]">
-              <a className="btn py-6  text-base rounded-full bg-primary-gradient bg-clip-text text-transparent font-bold">
+            <div className="border-2 cursor-pointer rounded-full border-[#5746d6]">
+              <a className="btn text-base  rounded-full bg-primary-gradient bg-clip-text text-transparent font-bold">
                 <img src={playButtonImage} alt="Play a image" />
                 Watch Demo
               </a>
-            </button>
+            </div>
           </div>
         </div>
       </div>

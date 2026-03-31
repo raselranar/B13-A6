@@ -5,12 +5,16 @@ const fetchPricingData = fetch("/premium-tools-data.json").then((res) =>
   res.json(),
 );
 
-export default function ProductsSection() {
+export default function ProductsSection({ onSelectProduct }) {
   const PricingData = use(fetchPricingData);
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch px-4 gap-4 overflow-hidden place-items-center">
+    <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch place-items-center px-4 gap-4 w-fit mx-auto">
       {PricingData.map((data) => (
-        <PricingCard data={data} key={data.id} />
+        <PricingCard
+          onSelectProduct={onSelectProduct}
+          data={data}
+          key={data.id}
+        />
       ))}
     </div>
   );
