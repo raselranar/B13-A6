@@ -16,8 +16,8 @@ export default function PriceSection() {
         </div>
         {/* cards */}
         <div className="w-10/12 mx-auto grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-2 mt-4">
-          {pricingPlans.map((pricingPlan) => (
-            <Card pricingPlan={pricingPlan} />
+          {pricingPlans.map((pricingPlan, i) => (
+            <Card key={i} pricingPlan={pricingPlan} />
           ))}
         </div>
       </div>
