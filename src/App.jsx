@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeaderSection from "./Components/ Header/HeaderSection";
 import PremiumDigitalTools from "./Components/PremiumDigitalTools/PremiumDigitalTools";
 import StatsSection from "./Components/StatsSection";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [selectProduct, setSelectProduct] = useState([]);
@@ -16,6 +17,7 @@ function App() {
           setSelectProduct={setSelectProduct}
         />
       </main>
+      <ToastContainer />
     </>
   );
 }

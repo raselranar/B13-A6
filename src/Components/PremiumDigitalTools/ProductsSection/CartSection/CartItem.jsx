@@ -1,4 +1,4 @@
-import { MdDelete } from "react-icons/md";
+import { toast } from "react-toastify";
 
 export default function CartItem({ product, setSelectProduct }) {
   const handleRemoveProduct = () => {
@@ -6,9 +6,10 @@ export default function CartItem({ product, setSelectProduct }) {
       const filteredData = prev.filter(({ id }) => product.id !== id);
       return filteredData;
     });
+    toast.info(`${product.name} has been removed from your cart`);
   };
   return (
-    <li className="list-row border border-gray-300">
+    <li className="list-row border border-gray-300 items-center">
       <div>
         <img className="size-10 rounded-box" src={product.icon} />
       </div>

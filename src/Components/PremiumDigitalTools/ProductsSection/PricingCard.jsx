@@ -1,6 +1,8 @@
+import { FaCheck } from "react-icons/fa";
 import FeatureList from "../../UI/FeatureList";
+import { toast } from "react-toastify";
 
-export default function PricingCard({ data, onSelectProduct }) {
+export default function PricingCard({ data, onSelectProduct, selectProduct }) {
   const { name, description, price, tag, period, icon, tagType, features } =
     data;
   const badgeStyles = {
@@ -8,9 +10,24 @@ export default function PricingCard({ data, onSelectProduct }) {
     popular: "text-[#4F39F6] bg-[#E1E7FF]",
     new: "text-[#0A883E] bg-[#DBFCE7]",
   };
+  //  do something when buy button clicked
+  const handleAddToCart = () => {
+    if (!isSelected) {
+      onSelectProduct((prevData) => [...prevData, data]);
+      toast.success(`Nice! ${name} is now in your cart`, {
+        theme: "colored",
+      });
+    }
+  };
+  // {
+  //
+  //
+  //       }
+  // checking is this product selected and return boolean
+  const isSelected = selectProduct.some(({ id }) => data.id === id);
 
   return (
-    <div className="card hover:bg-base-200 transition-all duration-200  hover:-translate-y-2 max-w-95 bg-base-100 shadow-sm border border-gray-300">
+    <div className="card hover:bg-base-200 transition-all duration-200  hover:-translate-y-1 max-w-95 bg-base-100 shadow-sm border border-gray-300">
       <div className="card-body">
         <div
           className={`rounded-full self-end font-medium px-3 py-0.5 ${badgeStyles[tagType]}`}>
@@ -28,9 +45,15 @@ export default function PricingCard({ data, onSelectProduct }) {
         </div>
         <div className="mt-6">
           <button
-            onClick={() => onSelectProduct((prevData) => [...prevData, data])}
-            className="btn btn-primary btn-block rounded-full bg-primary-gradient">
-            Buy Now
+            onClick={handleAddToCart}
+            className={`btn btn-primary font-extrabold btn-block border-0 rounded-full ${isSelected ? "bg-[#00a640]" : "bg-primary-gradient"}`}>
+            {isSelected ? (
+              <span className="flex items-center gap-2">
+                <FaCheck /> Added to cart
+              </span>
+            ) : (
+              "Buy Now"
+            )}
           </button>
         </div>
       </div>

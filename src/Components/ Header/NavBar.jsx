@@ -66,9 +66,11 @@ export default function NavBar({ selectProduct }) {
         </div>
         <div className="navbar-end gap-4 ml-8">
           <div className="indicator">
-            <span className="indicator-item badge badge-secondary font-bold size-6 text-xs rounded-full">
-              {selectProduct.length}
-            </span>
+            {selectProduct.length !== 0 && (
+              <span className="indicator-item badge badge-secondary font-bold size-6 text-xs rounded-full">
+                {selectProduct.length}
+              </span>
+            )}
             <button className="p-1">
               <FiShoppingCart size="1.4em" />
             </button>

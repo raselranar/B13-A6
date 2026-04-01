@@ -43,7 +43,10 @@ export default function PremiumDigitalTools({
           />
         ) : (
           <Suspense fallback={<Loading />}>
-            <ProductsSection onSelectProduct={setSelectProduct} />
+            <ProductsSection
+              selectProduct={selectProduct}
+              onSelectProduct={setSelectProduct}
+            />
           </Suspense>
         )}
       </section>
