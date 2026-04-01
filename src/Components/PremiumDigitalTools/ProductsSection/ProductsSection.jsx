@@ -8,7 +8,7 @@ const fetchPricingData = fetch("/premium-tools-data.json").then((res) =>
 export default function ProductsSection({ onSelectProduct, selectProduct }) {
   const PricingData = use(fetchPricingData);
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch place-items-center px-4 gap-4 w-fit mx-auto">
+    <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch place-items-center gap-4 w-fit mx-auto">
       {PricingData.map((data) => (
         <PricingCard
           onSelectProduct={onSelectProduct}

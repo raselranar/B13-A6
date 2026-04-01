@@ -9,7 +9,7 @@ export default function PremiumDigitalTools({
 }) {
   const [activeTab, setActiveTab] = useState("products");
   return (
-    <section className="container mx-auto mt-20 px-4">
+    <section className="container mx-auto mt-4 sm:mt-8 md:mt-18 px-4">
       <div className="">
         <h2 className="font-extrabold text-3xl  sm:text-4xl md:text-5xl leading-17 text-center">
           Premium Digital Tools

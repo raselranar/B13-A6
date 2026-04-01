@@ -43,7 +43,7 @@ export default function NavBar({ selectProduct }) {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">DigiTools</a>
+          <a className="btn btn-ghost text-xl hidden sm:flex">DigiTools</a>
         </div>
         <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1 *:text-base">

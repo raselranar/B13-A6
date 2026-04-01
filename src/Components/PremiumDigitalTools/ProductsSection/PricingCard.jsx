@@ -19,10 +19,7 @@ export default function PricingCard({ data, onSelectProduct, selectProduct }) {
       });
     }
   };
-  // {
-  //
-  //
-  //       }
+
   // checking is this product selected and return boolean
   const isSelected = selectProduct.some(({ id }) => data.id === id);
 
@@ -46,7 +43,7 @@ export default function PricingCard({ data, onSelectProduct, selectProduct }) {
         <div className="mt-6">
           <button
             onClick={handleAddToCart}
-            className={`btn btn-primary font-extrabold btn-block border-0 rounded-full ${isSelected ? "bg-[#00a640]" : "bg-primary-gradient"}`}>
+            className={`btn text-white font-extrabold btn-block border-0 rounded-full ${isSelected ? "bg-[#00a640]" : "bg-primary-gradient"}`}>
             {isSelected ? (
               <span className="flex items-center gap-2">
                 <FaCheck /> Added to cart
