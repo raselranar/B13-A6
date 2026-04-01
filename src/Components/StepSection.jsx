@@ -12,7 +12,7 @@ function Card({ number, icon, heading, description }) {
         </span>
       </div>
       {/* icon */}
-      <div className="bg-pink-100 p-5 rounded-full w-fit">
+      <div className="bg-pink-100/50 p-5 rounded-full w-fit">
         <img className="w-fit" src={icon} alt="" />
       </div>
       <h3 className="font-bold text-2xl">{heading}</h3>
@@ -23,11 +23,11 @@ function Card({ number, icon, heading, description }) {
 
 export default function StepSection() {
   return (
-    <section className="py-15 px-3">
+    <section className="py-15 md:py-20 px-3">
       <div className="container mx-auto">
         {/* heading part */}
         <div className="flex flex-col items-center">
-          <h2 className="font-extrabold text-2xl/relaxed md:text-3xl lg:text-5xl">
+          <h2 className="font-extrabold text-3xl/relaxed lg:text-5xl">
             Get Started in 3 Steps
           </h2>
           <p className="text-[14px] mt-2 sm:text-lg text-center text-gray-500">

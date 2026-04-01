@@ -4,6 +4,9 @@ import PremiumDigitalTools from "./Components/PremiumDigitalTools/PremiumDigital
 import StatsSection from "./Components/StatsSection";
 import { ToastContainer } from "react-toastify";
 import StepSection from "./Components/StepSection";
+import PriceSection from "./Components/PriceSection/PriceSection";
+import ReadySection from "./Components/ReadySection";
+import Footer from "./Components/Footer.jsx";
 
 function App() {
   const [selectProduct, setSelectProduct] = useState([]);
@@ -18,7 +21,10 @@ function App() {
           setSelectProduct={setSelectProduct}
         />
         <StepSection />
+        <PriceSection />
+        <ReadySection />
       </main>
+      <Footer></Footer>
       <ToastContainer />
     </>
   );

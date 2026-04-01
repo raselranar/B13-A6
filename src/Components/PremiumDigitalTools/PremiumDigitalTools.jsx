@@ -21,7 +21,7 @@ export default function PremiumDigitalTools({
       </div>
       {/* tab buttons */}
       <div
-        className="mt-5 border-2 border-gray-200/80 bg-base-200 w-fit mx-auto
+        className="mt-5 border border-gray-200/80 bg-base-200 w-fit mx-auto
         py-1 px-1 rounded-full grid grid-cols-2">
         <button
           onClick={() => setActiveTab("products")}
