@@ -37,7 +37,10 @@ export default function PremiumDigitalTools({
       {/* cards */}
       <section className="mt-10">
         {activeTab === "cart" ? (
-          <CartSection selectProduct={selectProduct} />
+          <CartSection
+            selectProduct={selectProduct}
+            setSelectProduct={setSelectProduct}
+          />
         ) : (
           <Suspense fallback={<Loading />}>
             <ProductsSection onSelectProduct={setSelectProduct} />
