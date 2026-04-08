@@ -58,7 +58,7 @@ It was built by converting **Figma designs** into **reusable React components** 
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/react-ecommerce-frontend.git
+git clone https://github.com/raselranar/B13-A6.git
 
 # 2. Go to project folder
 cd react-ecommerce-frontend
